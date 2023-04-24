@@ -10,26 +10,26 @@
  */
 void selection_sort(int *array, size_t size)
 {
-	size_t i, j, k;
+	size_t u, h, m;
 	int temp;
 
 	if (!array || !size)
 		return;
 
-	for (i = 0; i < size - 1; i++)
+	for (u = 0; u < size - 1; u++)
 	{
-		for (j = size - 1, k = i + 1; j > i; j--)
+		for (h = size - 1, m = u + 1; h > u; h--)
 		{
-			if (array[j] < array[k])
+			if (array[h] < array[m])
 			{
-				k = j;
+				m = h;
 			}
 		}
-		if (array[i] > array[k])
+		if (array[u] > array[m])
 		{
-			temp = array[i];
-			array[i] = array[k];
-			array[k] = temp;
+			temp = array[u];
+			array[u] = array[m];
+			array[m] = temp;
 			print_array(array, size);
 		}
 	}
