@@ -31,26 +31,26 @@ void swap(listint_t *a, listint_t *b)
  */
 void insertion_sort_list(listint_t **list)
 {
-	listint_t *i, *j;
+	listint_t *u, *h;
 
 	if (!list || !*list || !(*list)->next)
 		return;
-	i = (*list)->next;
-	while (i)
+	u = (*list)->next;
+	while (u)
 	{
-		j = i;
-		i = i->next;
-		while (j && j->prev)
+		h = u;
+		u = u->next;
+		while (h && h->prev)
 		{
-			if (j->prev->n > j->n)
+			if (h->prev->n > h->n)
 			{
-				swap(j->prev, j);
-				if (!j->prev)
-					*list = j;
+				swap(h->prev, h);
+				if (!h->prev)
+					*list = h;
 				print_list((const listint_t *)*list);
 			}
 			else
-				j = j->prev;
+				h = h->prev;
 		}
 	}
 }
