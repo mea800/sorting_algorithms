@@ -10,7 +10,7 @@
  *
  * @n: Integer value stored in the node
  * @prev: Pointer to the previous element in the list
- * @next: Pointer to the next element in the list
+ * @next: Pointer to the next element in0 the list
  */
 typedef struct listint_s
 {
@@ -20,10 +20,7 @@ typedef struct listint_s
 } listint_t;
 
 
-/**
-*Function prototypes for printing, checking,
-*and sorting arrays and linked lists
-*/
+/* print.c */
 void print_array(const int *array, size_t size);
 void print_list(const listint_t *list);
 void check_list(const listint_t *list);
