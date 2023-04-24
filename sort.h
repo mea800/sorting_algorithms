@@ -1,16 +1,16 @@
 #ifndef _SORT_H
 #define _SORT_H
 
-#include <stdlib.h>
-#include <stdio.h>
-#include <time.h>
+#include <stdlib.h>  // for using memory allocation functions
+#include <stdio.h>  // for using standard input/output functions
+#include <time.h>  // for using time-related functions
 
 /**
  * struct listint_s - Doubly linked list node
  *
- * @n: Integer stored in the node
- * @prev: Pointer to the previous element of the list
- * @next: Pointer to the next element of the list
+ * @n: Integer value stored in the node
+ * @prev: Pointer to the previous element in the list
+ * @next: Pointer to the next element in the list
  */
 typedef struct listint_s
 {
@@ -20,7 +20,10 @@ typedef struct listint_s
 } listint_t;
 
 
-/* print.c */
+/** 
+*Function prototypes for printing, checking,
+*and sorting arrays and linked lists
+*/
 void print_array(const int *array, size_t size);
 void print_list(const listint_t *list);
 void check_list(const listint_t *list);
