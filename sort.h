@@ -1,9 +1,9 @@
 #ifndef _SORT_H
 #define _SORT_H
 
-#include <stdlib.h>  // for using memory allocation functions
-#include <stdio.h>  // for using standard input/output functions
-#include <time.h>  // for using time-related functions
+#include <stdlib.h>
+#include <stdio.h>
+#include <time.h>
 
 /**
  * struct listint_s - Doubly linked list node
@@ -20,7 +20,7 @@ typedef struct listint_s
 } listint_t;
 
 
-/** 
+/**
 *Function prototypes for printing, checking,
 *and sorting arrays and linked lists
 */
