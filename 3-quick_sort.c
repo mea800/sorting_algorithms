@@ -1,13 +1,13 @@
 #include "sort.h"
 
 /**
- * swap - swaps 2 int values
- * @array: the integer array to sort
- * @size: the size of the array
- * @a: address of first value
- * @b: address of second value
+ * swap - Swaps two integer values.
+ * @array: The integer array to sort.
+ * @size: The size of the array.
+ * @a: Address of first value.
+ * @b: Address of second value.
  *
- * Return: void
+ * Return: Void.
  */
 void swap(int *array, size_t size, int *a, int *b)
 {
@@ -21,13 +21,13 @@ void swap(int *array, size_t size, int *a, int *b)
 }
 
 /**
- * lomuto_partition - partitions the array
- * @array: the integer array to sort
- * @size: the size of the array
- * @lo: the low index of the sort range
- * @hi: the high index of the sort range
+ * lomuto_partition - Partitions the array using Lomuto scheme.
+ * @array: The integer array to sort.
+ * @size: The size of the array.
+ * @lo: The low index of the sort range.
+ * @hi: The high index of the sort range.
  *
- * Return: void
+ * Return: The index of the pivot element.
  */
 size_t lomuto_partition(int *array, size_t size, ssize_t lo, ssize_t hi)
 {
@@ -42,13 +42,13 @@ size_t lomuto_partition(int *array, size_t size, ssize_t lo, ssize_t hi)
 }
 
 /**
- * quicksort - quicksorts via Lomuto partitioning scheme
- * @array: the integer array to sort
- * @size: the size of the array
- * @lo: the low index of the sort range
- * @hi: the high index of the sort range
+ * quicksort - Sorts an integer array using quicksort algorithm.
+ * @array: The integer array to sort.
+ * @size: The size of the array.
+ * @lo: The low index of the sort range.
+ * @hi: The high index of the sort range.
  *
- * Return: void
+ * Return: Void.
  */
 void quicksort(int *array, size_t size, ssize_t lo, ssize_t hi)
 {
@@ -62,11 +62,11 @@ void quicksort(int *array, size_t size, ssize_t lo, ssize_t hi)
 }
 
 /**
- * quick_sort - calls quicksort
- * @array: the integer array to sort
- * @size: the size of the array
+ * quick_sort - Sorts an integer array using quicksort algorithm.
+ * @array: The integer array to sort.
+ * @size: The size of the array.
  *
- * Return: void
+ * Return: Void.
  */
 void quick_sort(int *array, size_t size)
 {
