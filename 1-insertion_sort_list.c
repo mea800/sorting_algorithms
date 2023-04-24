@@ -1,11 +1,12 @@
 #include "sort.h"
 
 /**
- * swap - swaps 2 nodes in a doubly-linked list
- * @a: address of first node
- * @b: address of second node
+ * swap - Swaps two adjacent nodes in a doubly-linked list
+ * @a: Address of the first node
+ * @b: Address of the second node
  *
- * Return: void
+ * This function swaps two adjacent nodes in a doubly-linked list.
+ * It updates the pointers of the nodes and their neighbors accordingly.
  */
 void swap(listint_t *a, listint_t *b)
 {
@@ -17,14 +18,15 @@ void swap(listint_t *a, listint_t *b)
 	b->prev = a->prev;
 	a->prev = b;
 	b->next = a;
-
 }
 
 /**
- * insertion_sort_list - insertion sorts a doubly-linked list
- * @list: address of pointer to head node
+ * insertion_sort_list - Sorts a doubly-linked list using insertion sort algorithm
+ * @list: Address of pointer to head node
  *
- * Return: void
+ * This function sorts a doubly-linked list using insertion sort algorithm.
+ * It iterates through the list, swapping adjacent nodes as necessary.
+ * It prints the list after each swap.
  */
 void insertion_sort_list(listint_t **list)
 {
@@ -49,6 +51,5 @@ void insertion_sort_list(listint_t **list)
 			else
 				j = j->prev;
 		}
-
 	}
 }
