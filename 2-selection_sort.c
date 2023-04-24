@@ -1,10 +1,12 @@
 #include "sort.h"
+
 /**
- *selection_sort- function that sorts using selection sort algorithm
+ * selection_sort - Sorts an array of integers using selection sort algorithm
+ * @array: Array to be sorted
+ * @size: Size of the array
  *
- *@array: array to be sorted
- *@size: size of the array
- *
+ * Description: Sorts the array by repeatedly finding the minimum element
+ * from the unsorted part and putting it at the beginning.
  */
 void selection_sort(int *array, size_t size)
 {
@@ -13,6 +15,7 @@ void selection_sort(int *array, size_t size)
 
 	if (!array || !size)
 		return;
+
 	for (i = 0; i < size - 1; i++)
 	{
 		for (j = size - 1, k = i + 1; j > i; j--)
