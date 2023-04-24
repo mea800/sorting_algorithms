@@ -9,13 +9,13 @@
  *
  * Return: Void.
  */
-void swap(int *array, size_t size, int *s, int *n)
+void swap(int *array, size_t size, int *a, int *b)
 {
-	if (*s != *n)
+	if (*a != *b)
 	{
-		*s = *s + *n;
-		*n = *s - *n;
-		*s = *s - *n;
+		*a = *a + *b;
+		*b = *a - *b;
+		*a = *a - *b;
 		print_array((const int *)array, size);
 	}
 }
@@ -31,14 +31,14 @@ void swap(int *array, size_t size, int *s, int *n)
  */
 size_t lomuto_partition(int *array, size_t size, ssize_t lo, ssize_t hi)
 {
-	int u, h, pivot = array[hi];
+	int i, j, pivot = array[hi];
 
-	for (u = h = lo; h < hi; h++)
-		if (array[h] < pivot)
-			swap(array, size, &array[j], &array[u++]);
-	swap(array, size, &array[u], &array[hi]);
+	for (i = j = lo; j < hi; j++)
+		if (array[j] < pivot)
+			swap(array, size, &array[j], &array[i++]);
+	swap(array, size, &array[i], &array[hi]);
 
-	return (u);
+	return (i);
 }
 
 /**
